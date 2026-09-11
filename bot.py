@@ -11,7 +11,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from difflib import SequenceMatcher
 
-BOT_TOKEN = ""
+BOT_TOKEN = "7996632086:AAHezLh67Hg602L27uLDq9kq_oUV3MNl7l4"
 
 DATA_DIR = Path("/app/data")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
