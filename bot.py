@@ -34,6 +34,10 @@ async def _delete_later(chat_id: int, message_id: int, delay: int = 300):
     except Exception:
         pass
 
+async def reply_and_delete(m: types.Message, text: str, delay: int = 300, **kwargs) -> types.Message:
+    """Отправить ответ с авто-удалением (алиас для reply_auto)."""
+    return await reply_auto(m, text, delay, **kwargs)
+
 async def reply_auto(m: types.Message, text: str, delay: int = 300, **kwargs) -> types.Message:
     """Отправить ответ с авто-удалением."""
     msg = await m.answer(text, **kwargs)
@@ -3834,3 +3838,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except Exception as e:
         logger.critical(f"CRASH: {e}", exc_info=True)
+
